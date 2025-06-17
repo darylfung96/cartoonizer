@@ -1,6 +1,7 @@
 [project]
 name = "cartoonizer"
 version = "0.1.0"
+packages = ["."]
 description = "A project to cartoonize images."
 readme = "README.md"
 requires-python = ">=3.11"
