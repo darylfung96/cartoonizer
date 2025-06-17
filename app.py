@@ -19,14 +19,13 @@ step = 12
 
 
 @click.command()
-@click.option("--style", type=click.Choice(styles))
+@click.option("--style", type=click.Choice(styles), default="Studio Ghibli")
 @click.option("--original_image", type=click.Path(exists=True))
-@click.option("--inference_mode", type=click.Choice(inference_modes))
-@click.option("--image_guidance", type=float)
-@click.option("--image_ratio", type=click.Choice(image_ratios))
-@click.option("--use_random_seed", type=bool)
-@click.option("--seed", type=int)
-@click.option("--steps", type=int)
+@click.option("--inference_mode", type=click.Choice(inference_modes), default="Fast")
+@click.option("--image_guidance", type=float, default=image_guidance)
+@click.option("--image_ratio", type=click.Choice(image_ratios), default="Square(1:1)")
+@click.option("--seed", type=int, default=seed)
+@click.option("--steps", type=int, default=step)
 def infer(
     style,
     original_image,
